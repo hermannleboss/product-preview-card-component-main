@@ -7,7 +7,164 @@
 @import "base/display";
 @import "base/typography";
 
-
 @import "layout/container";
 
 @import "pages/home";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  /* or 100% */
+
+  margin-top: 12px;
+  margin-bottom: 16px;
+
+  /* Gunmetal */
+
+  color: #1C232B;
+
+}
+
+p {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  /* or 164% */
+
+
+  /* Aurometal Saurus */
+
+  color: #6C7289;
+  margin-bottom: 24px;
+}
+
+img {
+  width: 100%;
+}
+
+.bg- {
+  &cream {
+    background-color: $cream;
+  }
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 343px;
+  height: 611px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (min-width: 992px) {
+    display: flex;
+    width: 600px;
+    height: 450px;
+  }
+  &-img {
+    height: 240px;
+    object-fit: cover;
+    @media (min-width: 992px) {
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  &-content {
+    padding: 24px;
+    @media (min-width: 992px) {
+      padding: 31.5px;
+    }
+  }
+}
+
+.sub-title {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  letter-spacing: 5px;
+
+  /* Aurometal Saurus */
+
+  color: #6C7289;
+}
+
+.price {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  align-self: center;
+
+  &-reduction {
+    font-family: 'Fraunces', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    /* identical to box height, or 100% */
+
+    /* Deep Aquamarine */
+
+    color: #3D8168;
+  }
+
+  &-default {
+    align-self: center;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    /* identical to box height, or 177% */
+
+    text-decoration-line: line-through;
+
+    /* Aurometal Saurus */
+
+    color: #6C7289;
+  }
+}
+
+.btn {
+  background: #3D8168;
+  border-radius: 8px;
+  height: 48px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11.61px;
+
+  margin-top: 20px;
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  & > img {
+    width: 14.39px;
+    height: 16px;
+    //width: auto;
+  }
+}
